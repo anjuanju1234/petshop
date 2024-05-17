@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Petshop.master.cs" Inherits="Petshop" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+    .txt,select,button,input
+    {
+        padding:7px;
+    }
+    label
+    {
+        padding:10px;
+    }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <asp:LinkButton ID="LinkButton1" runat="server" 
+        PostBackUrl="~/Registration.aspx">Registration</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Edit.aspx">Edit</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Delete.aspx">Delete</asp:LinkButton>
+
+    &nbsp;
+    <asp:HyperLink ID="HyperLink1" runat="server" 
+        NavigateUrl="~/GroomingCategory.aspx">Grooming Category</asp:HyperLink>
+&nbsp;
+    <asp:HyperLink ID="HyperLink2" runat="server" 
+        NavigateUrl="~/ShowGroomingCategory.aspx">Show</asp:HyperLink>
+&nbsp;&nbsp;<asp:LinkButton ID="LinkButton4" runat="server" 
+        PostBackUrl="~/AddMedicine.aspx">Add Medicine</asp:LinkButton>
+    &nbsp;
+    <asp:LinkButton ID="LinkButton5" runat="server" 
+        PostBackUrl="~/ShowMedicine.aspx">Show Medicine</asp:LinkButton>
+    &nbsp;
+
+    <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="~/Billing.aspx">Billing</asp:LinkButton>
+
+    <br />&nbsp;<div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
